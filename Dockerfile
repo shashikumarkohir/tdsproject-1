@@ -9,12 +9,11 @@ ADD https://astral.sh/uv/install.sh /uv-installer.sh
 # Run the installer then remove it
 RUN sh /uv-installer.sh && rm /uv-installer.sh
 
-# Ensure the installed binary is on the PATH
+# Ensure the installed binary is on the `PATH`
 ENV PATH="/root/.local/bin/:$PATH"
 
 WORKDIR /app
 
-COPY tdsproject-1.py /app/app.py
+COPY app.py /app
 
-
-CMD ["uv", "run", "app.py"]
+CMD ["uv", "run", "app.py"]
