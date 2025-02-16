@@ -1,3 +1,5 @@
+#this is docker 
+
 FROM python:3.12-slim-bookworm
 
 # The installer requires curl (and certificates) to download the release archive
